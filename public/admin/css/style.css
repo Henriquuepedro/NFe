@@ -1,0 +1,172 @@
+.display-none{
+    display: none
+}
+.display-flex{
+    display: flex
+}
+.no-padding{
+    padding: 0px !important;
+}
+.no-margin{
+    margin: 0px !important;
+}
+.no-border{
+    border: 0px !important
+}
+.border-top-form-gray{
+    border-top: 1px solid #ddd
+}
+.form-validate-error{
+    display: none
+}
+.form-validate-error li{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form-validate-error li::before{
+    font-family: 'Font Awesome 5 free';
+    font-weight: 600;
+    content: "\f00d";
+    font-size: 13px;
+    padding-right: 10px;
+    color: #c70a0a
+}
+.form-validate-error label{
+    margin: 0
+}
+.cep-input-icon .input-group-text:hover{
+    background-color: #20c997;
+    color: #fff;
+    cursor: pointer
+}
+.has-error .select2-selection,
+.has-error [class*="icheck-"] > input[type="radio"]:first-child + label::before,
+.has-error input,
+.has-error select,
+.has-error textarea {
+    border: 1px solid #a94442
+}
+.card-footer{
+    border-top: 1px solid #ddd;
+}
+.table thead th{
+    border-bottom: 1px solid #dee2e6
+}
+.table-striped tbody tr:nth-of-type(odd){
+    background-color: rgba(18, 157, 116, 0.15);
+}
+.table .dropdown-menu{
+    padding: 5px 10px;
+}
+.table .dropdown-menu a{
+    line-height: 30px;
+}
+.table [data-toggle="dropdown"].fa-cog{
+    cursor: pointer
+}
+.btn{
+    border-radius: 0px;
+}
+.overflow-creen-load{
+    position: fixed;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    top: 0;
+    left: 0;
+    z-index: 1038;
+    width: 100%;
+}
+.overflow-creen-load::before{
+    font-family: 'Font Awesome 5 free';
+    font-weight: 600;
+    content: "\f021";
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+}
+i[delete-alert]{
+    cursor: pointer
+}
+.tablePriceList tbody tr:first-child td:last-child{
+    border: 0px
+}
+.tablePriceList tbody tr td:last-child{
+    display: flex;
+    justify-content: space-around;
+}
+.tablePriceList tbody tr td:last-child i{
+    font-size: 17px;
+    cursor: pointer;
+}
+.tablePriceList tbody tr td{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.col-md-2-5{
+    flex: 0 0 20%;
+    max-width: 20%;
+    position: relative;
+    width: 100%;
+    padding-right: 7.5px;
+    padding-left: 7.5px;
+}
+
+@media (max-width:767px){
+    .col-md-2-5 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .col-md-2-5 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    .col-md-2-5 {
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+}
+.dropdown-menu.show{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+.dropdown-menu.show a{
+    width: 100%;
+    padding: 0 10px;
+}
+.dropdown-menu.show hr{
+    width: 100%;
+    margin: 5px 0px;
+    border: .5px solid #bbb;
+}
+.custom-file-label::after {
+    content: "Procurar";
+    cursor: pointer;
+}
+.alert-warning, .btn-warning{
+    color: #fff;
+}
+.alert-warning{
+    background-color: #f0b80d;
+}
+.btn-warning{
+    background-color: #e3ac05;
+    border-color: #c7980a;
+}
+.btn-warning:hover{
+    background-color: #d19e05;
+    border-color: #b68b09;
+    color: #fff;
+}

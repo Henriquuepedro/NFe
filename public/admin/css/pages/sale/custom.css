@@ -1,0 +1,124 @@
+#collapseSale.sale .card{
+    margin-bottom: 0px;
+}
+#collapseSale.sale{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#formRegister.saleForm{
+    background: #f4f6f9;
+    border-right: 3px solid #f4f6f9;
+    border-left: 3px solid #f4f6f9;
+    margin-right: -2px;
+    margin-left: -2px;
+}
+#formRegister.saleForm .card-footer{
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+#formRegister.saleForm .card-body{
+    border-bottom: 1px solid #ddd;
+}
+#formRegister.saleForm .select2{
+    width: 100% !important
+}
+.card .overlay.dark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+}
+#collapseSale.sale #products .overlay.dark,
+#collapseSale.sale #infoSale .overlay.dark{
+    width: 97%;
+    height: 44%;
+    bottom: 33px;
+    left: 3px;
+}
+.table-products{
+    width: 100%
+}
+.table-products thead{
+    background: #007bff;
+    color: #fff;
+    border-bottom: 1px solid #000;
+}
+.table-products thead th{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.table-products tbody td{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.table-products tbody td:not(:nth-child(10)),
+.table-products thead th:not(:last-child){
+    border-right: 1px solid #000;
+}
+.table-products tbody tr:nth-of-type(even) {
+    background-color: rgba(0,0,0,.1);
+}
+.table-products tbody tr:last-child{
+    border-bottom: 1px solid #000;
+}
+.table-products tbody tr i.fa{
+    cursor: pointer;
+}
+.table-products thead th:first-child .custom-control,
+.table-products tbody td:first-child .custom-control{
+    margin-right: -50%;
+}
+.table-products .custom-control-input:checked~.custom-control-label::before{
+    border-color: #000;
+    background-color: #000;
+}
+.installments .col-md-2{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.installments .form-control,
+.installments .input-group-text{
+    border-radius: 0px;
+}
+.installments .title-installment{
+    font-weight: bold;
+    text-align: right;
+    align-self: flex-end;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+#formPayment .refreshValues:hover::after{
+    font-family: sans-serif;
+    font-weight: 600;
+    content: 'Atualizar Valores';
+    cursor: pointer;
+    padding-left: 6px;
+}
+#formPayment .refreshValues{
+    padding: 8px;
+    border: 1px solid #005cbe;
+    border-radius: 3px;
+    background: #007bff;
+    color: #fff;
+    height: 33px;
+}
+.table-products .description{
+    max-width: 0ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.swal2-container .swal2-actions button{
+    width: 50%
+}
+@media (min-width:992px){
+    .tooltip-inner{
+        max-width: 350px;
+    }
+}
+.card-footer::after{
+    display: none;
+}
