@@ -1,78 +1,101 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# NFe Generation System
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This is a web application designed for generating electronic invoices (NFe) for businesses. It provides a complete workflow from client and product registration, sales management, to invoice issuance and downloads. It includes multiple features for administration and user management, as well as integration for querying city data, product information, and client details.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### User Authentication & Authorization
+- Authentication routes with login, logout, and password management.
+- Admin panel accessible only to authenticated users, allowing for role-based access control.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Client Management
+- **List Clients**: View registered clients.
+- **Register Client**: Add new clients to the system.
+- **Edit Client**: Edit existing client details.
+- **Delete Client**: Remove a client from the system.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Product Management
+- **List Products**: View registered products.
+- **Register Product**: Add new products to the system.
+- **Edit Product**: Edit existing product details.
+- **Delete Product**: Remove a product from the system.
 
-## Learning Laravel
+### Sale Management
+- **List Sales**: View all sales transactions.
+- **Register Sale**: Record new sales transactions.
+- **Edit Sale**: Edit existing sale transactions.
+- **Delete Sale**: Remove a sale from the system.
+- **Generate NFe**: Issue electronic invoices (NFe) for sales, view issued invoices, and cancel invoices when needed.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Nature Management
+- **List Nature**: View registered nature of operations.
+- **Register Nature**: Add new operation nature details.
+- **Edit Nature**: Edit operation nature details.
+- **Delete Nature**: Remove an operation nature from the system.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Profile Management
+- **Edit Profile**: Update user profile information.
 
-## Laravel Sponsors
+### NFe Management
+- **Issue NFe**: Generate a new NFe for a sale.
+- **View NFe**: View the details of a generated NFe.
+- **Cancel NFe**: Cancel a previously issued NFe.
+- **Download NFe Files**: Download XML and PDF versions of the issued invoices.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Search Routes
+- **Search Cities**: Query cities within a specific state.
+- **Search Products**: Query data related to a specific product.
+- **Search Clients**: Query data related to a specific client.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+### File Download
+- **Download XML**: Download the XML version of the NFe.
+- **Download PDF**: Download the PDF version of the NFe.
+
+## Installation
+
+To set up this application locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Henriquuepedro/nfe.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd nfe
+    ```
+
+3. Install dependencies using Composer:
+    ```bash
+    composer install
+    ```
+
+4. Copy the `.env.example` file to create a `.env` file:
+    ```bash
+    cp .env.example .env
+    ```
+
+5. Set up your database configuration in the `.env` file.
+
+6. Generate the application key:
+    ```bash
+    php artisan key:generate
+    ```
+
+7. Run the database migrations:
+    ```bash
+    php artisan migrate
+    ```
+
+8. Start the local development server:
+    ```bash
+    php artisan serve
+    ```
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you want to contribute to this project, feel free to fork it and submit a pull request. Ensure that your changes are well-tested and documented.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-source and available under the MIT License.
